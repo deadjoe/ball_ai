@@ -1,5 +1,13 @@
 # 动态旋转六边形与弹跳球物理模拟
 
+[![Python Application](https://github.com/deadjoe/ball_ai/actions/workflows/python-app.yml/badge.svg)](https://github.com/deadjoe/ball_ai/actions/workflows/python-app.yml)
+[![Python Version](https://img.shields.io/badge/python-3.10-blue.svg)](https://www.python.org/downloads/)
+[![Pygame Version](https://img.shields.io/badge/pygame-2.5.0-green.svg)](https://www.pygame.org/)
+[![License](https://img.shields.io/github/license/deadjoe/ball_ai)](https://github.com/deadjoe/ball_ai/blob/main/LICENSE)
+[![Last Commit](https://img.shields.io/github/last-commit/deadjoe/ball_ai)](https://github.com/deadjoe/ball_ai/commits/main)
+[![Issues](https://img.shields.io/github/issues/deadjoe/ball_ai)](https://github.com/deadjoe/ball_ai/issues)
+[![Pull Requests](https://img.shields.io/github/issues-pr/deadjoe/ball_ai)](https://github.com/deadjoe/ball_ai/pulls)
+
 这是一个基于Pygame的物理模拟项目，展示了一个在旋转六边形内部弹跳的发光球体。该项目结合了物理模拟、碰撞检测、粒子效果和平滑渲染等多个技术要素。
 
 ## 技术特点
@@ -51,6 +59,20 @@
    - 状态更新
    - 帧率控制
 
+## 快速开始
+
+### 安装依赖
+
+```bash
+pip install -r requirements.txt
+```
+
+### 运行程序
+
+```bash
+python ball.py
+```
+
 ## 技术参数
 
 - 窗口尺寸：800x600像素
@@ -96,15 +118,26 @@
 3. 增加交互功能
 4. 修改游戏规则
 
-## 运行方式
+## CI/CD
 
-```bash
-python ball.py
-```
+本项目使用 GitHub Actions 进行持续集成，包括：
 
-## 控制说明
+- 自动化代码质量检查
+- Python语法检查
+- 依赖项安装测试
 
-- 程序启动后自动运行
-- 关闭窗口退出程序
-- 六边形自动旋转，速度和方向随机变化
-- 球体在重力和向心力作用下运动
+## 许可证
+
+该项目采用 MIT 许可证 - 查看 [LICENSE](LICENSE) 文件了解详情
+
+## 联系方式
+
+项目链接：[https://github.com/deadjoe/ball_ai](https://github.com/deadjoe/ball_ai)
+
+## 贡献指南
+
+1. Fork 该仓库
+2. 创建您的特性分支 (`git checkout -b feature/AmazingFeature`)
+3. 提交您的更改 (`git commit -m 'Add some AmazingFeature'`)
+4. 推送到分支 (`git push origin feature/AmazingFeature`)
+5. 打开一个 Pull Request
