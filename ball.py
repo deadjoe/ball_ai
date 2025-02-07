@@ -37,7 +37,7 @@ current_ball_color = BALL_COLORS[0]  # 初始球体颜色设为第一个颜色
 HEX_COLOR = (200, 200, 255)  # 淡蓝色，用于六边形
 
 # 六边形参数
-HEX_RADIUS = 100    # 六边形外接圆半径（像素）
+HEX_RADIUS = 200    # 六边形外接圆半径（像素）
 HEX_CENTER = Vector2(WIDTH // 2, HEIGHT // 2)  # 六边形中心位置
 MIN_ROTATION_SPEED = 0.5   # 最小旋转速度（度/帧）
 MAX_ROTATION_SPEED = 5     # 最大旋转速度（度/帧）
