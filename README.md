@@ -9,7 +9,7 @@
 [![Pull Requests](https://img.shields.io/github/issues-pr/deadjoe/ball_ai)](https://github.com/deadjoe/ball_ai/pulls)
 
 这是一个基于Pygame的物理模拟项目，展示了一个在旋转六边形内部弹跳的发光球体。该项目结合了物理模拟、碰撞检测、粒子效果和平滑渲染等多个技术要素。
-** Notice this code is totally written by Claude AI (Sonnet 3.5)
+**Notice this code is totally written by Claude AI (Sonnet 3.5)**
 
 ## 技术特点
 
