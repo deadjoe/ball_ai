@@ -8,8 +8,26 @@
 [![Issues](https://img.shields.io/github/issues/deadjoe/ball_ai)](https://github.com/deadjoe/ball_ai/issues)
 [![Pull Requests](https://img.shields.io/github/issues-pr/deadjoe/ball_ai)](https://github.com/deadjoe/ball_ai/pulls)
 
-这是一个基于Pygame的物理模拟项目，展示了一个在旋转六边形内部弹跳的发光球体。该项目结合了物理模拟、碰撞检测、粒子效果和平滑渲染等多个技术要素。
+这是一个基于Pygame的物理模拟项目，展示了一个在旋转六边形内部弹跳的发光球体。该项目采用模块化设计，结合了物理模拟、碰撞检测、粒子效果和平滑渲染等多个技术要素。
 **Notice this code is totally written by Claude AI (Sonnet 3.5)**
+
+## 项目架构
+
+### 1. 核心模块
+- `config.py`: 集中配置管理，使用 Protocol 实现类型安全
+- `game_engine.py`: 游戏引擎，包含物理引擎和渲染器
+- `game_objects.py`: 游戏对象定义，包括球体和六边形
+- `utils.py`: 工具函数，包含几何计算和渲染优化
+- `game_types.py`: 类型定义，确保类型安全
+- `logger.py`: 日志系统，提供错误追踪
+
+### 2. 测试模块
+- `tests/test_game_objects.py`: 游戏对象单元测试
+- `tests/test_physics_engine.py`: 物理引擎测试
+- `tests/test_renderer.py`: 渲染系统测试
+- `tests/test_game_state.py`: 游戏状态测试
+- `tests/test_integration.py`: 集成测试
+- `tests/run_tests.py`: 测试运行器
 
 ## 技术特点
 
@@ -71,7 +89,15 @@ pip install -r requirements.txt
 ### 运行程序
 
 ```bash
-python ball.py
+python game.py  # 使用新的模块化版本
+# 或
+python ball.py  # 使用原始单文件版本
+```
+
+### 运行测试
+
+```bash
+python tests/run_tests.py
 ```
 
 ## 技术参数
@@ -142,3 +168,41 @@ python ball.py
 3. 提交您的更改 (`git commit -m 'Add some AmazingFeature'`)
 4. 推送到分支 (`git push origin feature/AmazingFeature`)
 5. 打开一个 Pull Request
+
+## 开发指南
+
+### 1. 代码结构
+```
+ball_ai/
+├── config.py           # 配置管理
+├── game_types.py       # 类型定义
+├── game_objects.py     # 游戏对象
+├── game_engine.py      # 游戏引擎
+├── utils.py           # 工具函数
+├── logger.py          # 日志系统
+└── tests/             # 测试目录
+    ├── test_game_objects.py
+    ├── test_physics_engine.py
+    └── ...
+```
+
+### 2. 开发流程
+1. 确保所有更改都有对应的测试
+2. 运行测试套件验证更改
+3. 使用类型注解确保类型安全
+4. 遵循项目的错误处理规范
+
+## 版本历史
+
+### v2.0.0
+- 重构为模块化架构
+- 添加完整的测试覆盖
+- 实现类型安全
+- 改进物理引擎
+- 添加性能优化
+- 实现日志系统
+
+### v1.0.0
+- 初始版本（单文件实现）
+- 基本的物理模拟
+- 简单的渲染系统
