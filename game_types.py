@@ -1,4 +1,4 @@
-from typing import Dict, List, Tuple, Protocol
+from typing import List, Tuple, Protocol
 from pygame.math import Vector2
 
 # 使用 Protocol 而不是 TypedDict 来避免循环导入

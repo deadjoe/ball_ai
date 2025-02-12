@@ -1,5 +1,5 @@
 from pygame.math import Vector2
-from game_types import GameConfig, WindowConfig, PhysicsConfig, ColorsConfig, HexagonConfig
+from game_types import GameConfig
 
 GAME_CONFIG: GameConfig = {
     'WINDOW': {

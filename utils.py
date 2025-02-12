@@ -88,19 +88,19 @@ class GlowSurfaceCache:
             cls._surfaces[key] = surface
         return cls._surfaces[key]
 
-def draw_glowing_circle(surface: pygame.Surface, color: Tuple[int, int, int], 
+def draw_glowing_circle(surface: pygame.Surface, color: Tuple[int, int, int],
                        position: Tuple[int, int], radius: int) -> None:
     """优化的发光球体绘制"""
     render_scale = GAME_CONFIG['WINDOW']['RENDER_SCALE']
     position = (position[0] * render_scale, position[1] * render_scale)
     radius = radius * render_scale
-    
+
     # 使用缓存的发光表面
     for i in range(8):
         alpha = 120 - i * 15
         radius_offset = i * 1.5
         glow_radius = int(radius + radius_offset * render_scale)
         glow_surface = GlowSurfaceCache.get_surface(glow_radius, color, alpha)
-        surface.blit(glow_surface, 
+        surface.blit(glow_surface,
                     (position[0] - glow_radius, position[1] - glow_radius),
                     special_flags=pygame.BLEND_ALPHA_SDL2) 

@@ -1,6 +1,6 @@
 from pygame.math import Vector2
 from config import GAME_CONFIG
-from typing import Tuple, Optional
+from typing import Tuple
 import pygame
 
 class GameObject:
