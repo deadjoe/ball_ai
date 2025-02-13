@@ -57,8 +57,8 @@ ball_vel = Vector2(0, 0)  # 球体初始速度：静止
 GRAVITY = Vector2(0, 0.5)  # 重力加速度向量
 ELASTICITY = 0.8  # 碰撞弹性系数：0表示完全非弹性碰撞，1表示完全弹性碰撞
 FRICTION = 0.99  # 摩擦系数：每帧速度衰减比例
-COLLISION_BUFFER = BALL_RADIUS + HEX_BORDER_WIDTH/2  # 碰撞检测的缓冲距离，防止穿透
-MAX_BALL_SPEED = 20.0  # 球体最大速度限制，防止速度过大导致穿透或不稳定
+COLLISION_BUFFER = BALL_RADIUS * 2 + HEX_BORDER_WIDTH  # 碰撞检测的缓冲距离，防止穿透
+MAX_BALL_SPEED = 30.0  # 球体最大速度限制，防止速度过大导致穿透或不稳定
 
 def reset_ball():
     """重置球的位置和速度
@@ -185,8 +185,8 @@ def calculate_centripetal_force(pos, rotation_speed):
     angular_velocity = math.radians(abs(rotation_speed))
     # 计算向心加速度：v²/r = ω²r
     centripetal_acc = (angular_velocity ** 2) * r_length
-    # 返回向中心的力，乘以0.1作为力的缩放因子
-    return -r.normalize() * centripetal_acc * 0.1
+    # 返回向中心的力，乘以0.2作为力的缩放因子
+    return -r.normalize() * centripetal_acc * 0.2
 
 def is_ball_too_close_to_edge(ball_pos, hex_points):
     """检查球是否太靠近边缘
